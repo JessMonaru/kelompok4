@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tugas1pcs/data/game_data.dart';
 import 'package:tugas1pcs/model/game_model.dart';
 import 'package:tugas1pcs/page/detailgame_page.dart';
+import 'package:tugas1pcs/drawer.dart';
 
 class gamepage extends StatelessWidget {
   const gamepage({super.key});
@@ -19,7 +20,9 @@ class gamepage extends StatelessWidget {
               Navigator.push(context,
                MaterialPageRoute(builder: (context) => detailgame(
                 game: game,
-                )));
+                ),),);
+                
+                
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -50,6 +53,8 @@ class gamepage extends StatelessWidget {
             ),
           );
         }),
+    drawer: drawerwidget() ,
     );
+  
   }
 }
